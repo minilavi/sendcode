@@ -1,0 +1,304 @@
+<!-- <h1>{{title}}</h1> -->
+<!-- <h1>{{data}}</h1> -->
+<!-- GET TEXT BOX VALUE
+     <input type="text" #box placeholder="Enter Name" name="user_name" />
+<button (click)="getValue(box.placeholder)">Click</button>
+
+<p>
+    Box value is : {{  displayVal }}
+</p> -->
+
+<!-- MAKE COUNTER -->
+<!-- <button (click)="counter('minus')" >--</button>
+<p>Count : {{count}}</p>
+<button (click)="counter('add') ">++</button> -->
+
+<!-- HOW TO START WITH STYLE -->
+
+<!-- PROPERTY BINDING -->
+<!-- <input type = "text" name="user-name" value={{name}} disabled={{disable}}>
+<br/> <br/>
+<input type = "text" name="user-name"[value]=name [disabled]=disable> -->
+
+<!-- IF ELSE -->
+<!-- <h1 *ngIf="show=='yes', then ifBlock else elseBlock">
+    Hi Monika
+</h1>
+
+<ng-template #ifBlock>
+    <h1>If Condition</h1>
+</ng-template>
+
+<ng-template #elseBlock>
+    <h1>Else Condition</h1>
+</ng-template> -->
+
+<!-- MULTIPLE IF ELSE -->
+<!-- <ng-template [ngIf]="color==='red'">
+    <h1 style="color:red;">Red Colour</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='green'">
+    <h1 style="color:green;">Green Colour</h1>
+</ng-template>
+
+<ng-template [ngIf]="color==='blue'">
+    <h1 style="color:blue;">Blue Colour</h1>
+</ng-template> -->
+
+<!-- SWITCH CASE -->
+<!-- <div [ngSwitch]="color">
+    <h1 *ngSwitchCase="'red'" style="color:red">Red Color</h1>
+    <h1 *ngSwitchCase="'green'" style="color:green">Green Color</h1>
+    <h1 *ngSwitchCase="'blue'" style="color:blue">Blue Color</h1>
+    <h1 *ngSwitchCase="'orange'" style="color:orange">Orange Color</h1>
+    <h1 *ngSwitchCase="'grey'" style="color:grey">Grey Color</h1>
+    <h1 *ngSwitchDefault>Unknown Color</h1>
+</div> -->
+
+<!-- LOOP IN ANGULAR -->
+<!-- <h3 *ngFor="let item of users">Name is : {{item}}</h3>
+<h3 *ngFor="let item of userDetails" > {{item.name}} , {{item.email}} , {{item.phn}} </h3> -->
+
+<!-- NESTED LOOP -->
+<!-- <ul *ngFor="let user of users">
+    <li>{{user.name}}</li>
+    <li>{{user.email}}</li>
+    <li>Social Accounts</li>
+        <ul *ngFor="let account of user.socialAccounts">
+            <li>{{account}}</li>
+
+        </ul>
+
+</ul> -->
+
+<!-- STYLE BINDING -->
+<!-- <h1 [style.color]="color"[style.backgroundColor]="bgColor">{{title}}</h1>    property -->
+<!-- <h1 [style.color]="color"[style.backgroundColor]="bgColor">Heading tag</h1>
+
+<button (click)="updateColor()">Update Color</button> -->
+
+<!-- HEADER -->
+<!-- <app-header></app-header> -->
+
+<!-- BASIC ANGULAR FORM -->
+<!-- <form #basicForm="ngForm" (ngSubmit)="getdata(basicForm.value)">
+    <input type="text" ngModel name="user" placeholder="Enter user name"/>
+    <br/><br />
+    <input type="text" ngModel name="email" placeholder="Enter user email " />
+    <br /><br />
+    <input type="text" ngModel name="password" placeholder="Enter user password" />
+    <br /><br />
+    <button >Register</button>
+</form>
+
+<ul>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ul> -->
+
+<!-- TOGGLE ELEMENT -->
+<!-- <button (click)="toggle()">Toggle</button>
+<h1 *ngIf="display">
+    Heading Tag
+</h1> -->
+
+<!-- ADD BOOTSTRAP -->
+
+<!-- MAKE TODO LIST -->
+<!-- <input type="text" placeholder="Enter New Task" #task />
+<br> <br>
+<button (click)="addTask(task.value)"> Add Task</button>
+
+<br>
+<ul *ngFor="let item of list">
+    <li>{{item.name}}
+        <button (click)="removeTask(item.id)">Remove</button>
+    </li>
+</ul> -->
+
+<!-- SEND DATA PARENT TO CHILD COMPONENT-->
+<!-- <app-child [item]="data"></app-child>
+<button (click)="updateChild()">Update Child Component</button> -->
+
+<!-- REUSABLE COMPONENT -->
+<!-- <ul *ngFor="let user of userDetails">
+    <app-reusecom [item]='user'></app-reusecom>
+</ul> -->
+
+<!-- SEND DATA CHILD TO PARENT COMPONENT -->
+<!-- <app-childcom (updateDataEvent)="updateData($event)"></app-childcom> -->
+
+<!-- TWO WAY BINDING -->
+<!-- <input type="text"[(ngModel)]="name">   [(ngModel)]="name" this is binding -->
+
+<!-- <h2>{{name}}</h2>   name is property -->
+
+
+<!-- TEMPLATE REFERENCE VARIABLE -->
+<!-- <input type="text" #box>
+<button (click)="getVal(box.value)">Call Function</button> -->
+
+<!-- PIPES -->
+<!-- <h1>{{title | uppercase}}</h1>
+<h1>{{title | lowercase}}</h1>
+<h2>{{today | date : 'fullDate'}}</h2> -->
+
+<!-- ADVANCE PIPES -->
+<!-- <h1>{{title | slice: 3 : 7 | uppercase}}</h1>
+<h2>{{user | json |uppercase}}</h2>
+<h2>{{2.3 | number :'3.3-5'}}</h2>
+<h2>{{20 |currency:'INR'}}</h2>
+<h2>{{"hello how are you" | slice :0:1 |uppercase}}</h2> -->
+
+<!-- CUSTOM PIPES -->
+<!-- <h2>{{20 |usdInr :2  : 4}}</h2> -->
+
+<!-- TEMPLATE DRIVEN FORM -->
+<!-- <form #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+    <input type="text" placeholder="Enter Name" name = "name" ngModel>
+    <br><br>
+    <input type="password" placeholder="Enter Password" name = "password" ngModel > 
+    <br> <br>
+    <button>Login</button>
+
+</form> -->
+<!-- <button (click)=userLogin(loginForm.value)>Out side Login</button> INTERVIEW QUESTION -->
+
+<!-- REACTIVE FORM  -->
+<!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+    <input type="text" placeholder="Enter Name" name="user" formControlName="user">
+    <br> <br>
+    <input type="email" placeholder="Enter email" name="email" formControlName="email">
+    <br> <br>
+    <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+    <br> <br>
+    <button>Login</button>
+</form> -->
+
+<!-- REACTIVE FORM VALIDATIONS -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="app.component.css">
+    
+</head>
+
+
+
+<body>
+    <div id="main-div-left">
+
+        <div id="main-text">
+            <h1>
+                Learn to code by watching others
+            </h1>
+            <br>
+            <h4>
+                See how experienced developers solve problems in real-time.
+                Watching scripted tutorials is great,
+                but understanding how developers think is invaluavle.
+            </h4>
+        </div>
+
+    </div>
+    <div id="main-div">
+        <div id="rectangle">
+            Try it free 7 days then $20/mo.thereafter
+        </div>
+        <div class="container">
+
+
+            <form id="myForm" [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                <div class="form-group">
+
+                    <input type="text" pattern="^[a-zA-Z]{1,15}$" placeholder="First Name" name="user" formControlName="user">
+                    <br>
+                    <span *ngIf="user && user.invalid && user.touched">First Name can not be
+                        empty</span>
+
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input type="text" pattern="^[a-zA-Z]{1,15}$" placeholder="Last Name" name="user1" formControlName="user1">
+                    <br>
+                    <span  *ngIf="user1 && user1.invalid && user1.touched">Last Name can not be
+                        empty</span>
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input type="email"  placeholder="Email Address" name="email" formControlName="email">
+                    <br>
+                    <span  *ngIf="email && email.invalid && email.touched">This field is not
+                        valid</span>
+
+                </div>
+                <br>
+                <div class="form-group">
+                    <input type="password" pattern="^[a-zA-Z0-9_-]{1,15}$" placeholder="Password" name="password" formControlName="password">
+                    <br>
+                    <span  *ngIf="password && password.invalid && password.touched">password can not
+                        be
+                        empty</span>
+                </div>
+                <br>
+                <!-- <div id="submit-button"> -->
+
+                <button class="submit-button" [disabled]="loginForm.invalid">CLAIM YOUR FREE TRAIL</button>
+                <!-- </div> -->
+
+            </form>
+          
+            
+            <div id="footer">
+                <h6>By clicking the button you agreeing to our
+                <span style="color:#FF0000">Terms and Services</span>
+                </h6>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- DIRECTIVES -->
+<!-- <h1 appRedEl>{{title}}</h1>
+
+<p>Hello How are you</p>
+<p appRedEl>Hello </p>
+
+<p>Hello How are you</p>
+<p appRedEl>Hello </p> -->
+
+<!-- SERVICES -->
+<!-- <ul>
+    <li *ngFor="let data of memberData">
+        {{data.name}}
+
+    </li>
+</ul>
+
+<app-service-footer></app-service-footer> -->
+
+<!-- SERVICE CALL -->
+
+<!-- <h1>{{title}}</h1>
+<ul>
+    <li *ngFor="let a of users">
+        {{a.name}} : {{a.age}}
+
+    </li>
+</ul>
+<app-footer></app-footer> -->
+
+<!-- MYPROJECT -->
